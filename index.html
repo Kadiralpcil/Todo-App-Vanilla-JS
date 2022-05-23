@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="todo_container">
+        <div class="todo_header">
+            <span class="todo_title">
+                TODO
+            </span>
+            <img onclick="toggleModal()" class="todo_insert_icon btn" src="./img/insert-icon.svg" alt="">
+        </div>
+        <ul class="todo_list">
+            <!-- <li class="todo_item btn">
+                <div class="todo_complete btn"></div>
+                <div class="todo_info">
+                    <span class="todo_info_title">default 1</span>
+                    <span class="todo_info_desc">AçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklama</span>
+                </div>
+                <i class="fa-solid fa-trash-can trash-icon btn"></i>
+            </li>
+            <li class="todo_item complete btn">
+                <div class="todo_complete">
+                    <img src="./img/checked.svg" alt="">
+                </div>
+                <div class="todo_info">
+                    <span class="todo_info_title">iş 1</span>
+                    <span class="todo_info_desc">AçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklamaAçıklama</span>
+                </div>
+                <i class="fa-solid fa-trash-can trash-icon btn"></i>
+            <!-- </li> -->
+        </ul>
+        <div class="todo_modal">
+            <form id="todo_form">
+            <div class="todo_modal_body">
+                <input id="todo_text" name="title" class="form_control form_control_input" type="text" placeholder="Title">
+                <textarea id="todo_desc" name="desc" class="form_control form_control_area" placeholder="açıklama"></textarea>
+                <button onclick="addTodoItems()" class="btn btn-save"><img src="./img/checked.svg" alt="">KAYDET</button>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

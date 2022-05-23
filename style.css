@@ -1,0 +1,167 @@
+:root{
+    --app-corner:20px;
+}
+.btn{
+    cursor: pointer;
+}
+body{
+     display: flex;
+     justify-content: center;
+     padding-top: 2%;
+ }
+ .todo_container{
+     position: relative;
+     width: 375px;
+     height: 812px;
+     border-radius: var(--app-corner);
+     box-shadow: 5px 5px 15px #dedede;
+
+ }
+ .todo_header{
+     position: absolute;
+     width: inherit;
+     background-image: url("./img/todo-bg.svg");
+     height: 200px;
+     border-radius: var(--app-corner);
+ }
+ .todo_title{
+     color: white;
+     font-size: 42px;
+     font-weight: bold;
+     position: relative;
+     left:50px;
+     top:40px;
+ }
+ .todo_insert_icon{
+     position: absolute;
+     bottom: 0;
+     right: 20px;
+     cursor: pointer;
+     transition: transform 500ms ease-in;
+ }
+.todo_insert_icon:hover{
+    transform: rotate(360deg);   
+}
+.todo_list{
+    position: absolute;
+    list-style: none;
+    width: inherit;
+    padding-left: 0;
+    margin-top: 200px;
+
+}
+.todo_item{
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.todo_complete{
+    width: 24px;
+    height: 24px;
+    border: 1px solid blue;
+    display: flex;
+}
+.todo_info{
+    width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.todo_info_title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.todo_info_desc{
+    display: block;
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 400;
+}
+.todo_item.complete{
+    background-color: gray;
+}
+.todo_item.complete .todo_complete{
+    background-color: #c361ff;
+    border: 1px solid #c361ff;
+}
+.todo_item.complete .todo_info_title{
+    text-decoration: line-through;
+}
+.trash-icon{
+    font-size: x-large;
+}
+.non-todo-text{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 70px;
+    color: #c361ff;
+    font-size: xx-large;
+    font-weight:bold;
+}
+.Bruno-Mars{
+    width: 300px;
+    height: 300px;
+    border: 5px solid #c361ff;
+    border-radius: 50%;
+    margin-left: 35px;
+    margin-top: 200px;
+
+}
+.todo_modal{
+    position: relative;
+    display: none;
+    width: inherit;
+    height: inherit;
+    background-color: #00000050;
+    border-radius: var(--app-corner);
+}
+.todo_modal.show{
+    display: flex;
+}
+.todo_modal_body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 250px;
+    background-color: white;
+    left:0;
+    bottom: 0;
+    right: 0;
+    border-radius: var(--app-corner);
+    align-items: center;
+}
+.btn-save{
+    position: absolute;
+    background-color: #c361ff;
+    border: 1px solid #8b00e177;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    width: 92%;
+    bottom: 20px;
+    bottom: 10px;
+    margin-top: 5px;
+}
+.form_control{
+    background-color: #eae8ed;
+    border:1px solid black;
+    width: 90%;
+    font-size: 24px;
+}
+.form_control::placeholder{
+    color: #707070;
+}
+.form_control_input{
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.form_control_area{
+    height: 110px;
+}
