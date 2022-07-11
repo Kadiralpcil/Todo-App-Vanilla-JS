@@ -6,6 +6,12 @@ if(todoStorage){
     todoItems = [...JSON.parse(todoStorage)];
 }
 
+let pheobe ='./img/friends-pheobe.gif'
+let doOrdoNot = './img/do-or-do-not.gif'
+let brunoMars = './img/brunoMars.gif'
+let aLotOfWork = './img/aLotOfWork.gif'
+var randomNumber =  Math.floor(Math.random() * 4);
+let photoArray = [pheobe,doOrdoNot,brunoMars,aLotOfWork]
 
 
 const todoModalEl= document.querySelector('.todo_modal');
@@ -73,7 +79,7 @@ if(toggleItemIndex !=-1 ){
   
         const noneTodoItems = `<li class="non_todos">
     <span class="non-todo-text">There is no Todo</span>
-    <img class="Bruno-Mars" src="./img/Doing-Anything-Gif.gif" alt="">
+    <img class="doing-nothing" src="${photoArray[randomNumber]}" alt="">
 </li>`
     
     
@@ -87,7 +93,7 @@ if(removedItemIndex != -1){
     if(todoItems.length ==0){
      todoListEl.innerHTML = `<li class="non_todos">
     <span class="non-todo-text">There is no Todo</span>
-    <img class="Bruno-Mars" src="./img/Doing-Anything-Gif.gif" alt="">
+    <img class="doing-nothing" src="${photoArray[randomNumber]}" alt="">
 </li>`
 
     }
@@ -105,5 +111,3 @@ const ListTodoItems = () =>{
     }
 }
 ListTodoItems();
-
-ListTodoItems.style
